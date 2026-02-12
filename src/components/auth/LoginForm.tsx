@@ -1,14 +1,27 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import RegisterForm from "@/components/auth/RegisterForm";
 import { Eye, EyeClosed } from "lucide-react";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className="h-screen">
+    <div className="min-h-screen flex items-center justify-center">
+      <div
+        className="absolute bottom-[-40%] left-1/2 -translate-x-1/2
+               w-screen h-full
+               rounded-full blur-[300px] opacity-80"
+        style={{
+          background: "linear-gradient(180deg, #5613A3, #522BC8)",
+        }}
+      />
       <div className=" w-111.5 h-122.5 text-white border border-[#181D27] flex justify-center">
-        <form action="Login">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="justify-center items-center"
+        >
           <div className="pt-10 flex justify-center">
             <Image
               src="/icons/Icon.svg"
@@ -52,12 +65,12 @@ const LoginForm = () => {
             </div>
             <div className="pt-4">
               <span>Don't have an account? </span>
-              <a
+              <Link
                 href="/register"
                 className="text-[#6936F2]"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </div>
         </form>

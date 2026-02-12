@@ -14,13 +14,29 @@ const Navbar = () => {
             height={36}
           />
         </div>
-        <div className="col-start-2 text-center">
-          <input
-            type="text"
-            placeholder="Search"
-            className="bg-[#181D27] text-white p-2 rounded-full w-full max-w-xs"
-          />
+        <div className="col-start-2 flex justify-center">
+          <div
+            className="relative flex items-center 
+               border border-white/40 rounded-full 
+               bg-[#0F1623] w-full max-w-lg"
+          >
+            <Image
+              src="/icons/search-lg.svg"
+              alt="Search"
+              width={18}
+              height={18}
+              className="absolute left-4 opacity-70"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-transparent text-white 
+                 pl-12 pr-4 py-2 w-full 
+                 outline-none"
+            />
+          </div>
         </div>
+
         <div className="col-start-3 text-right gap-3">
           <Link
             href="/login"
