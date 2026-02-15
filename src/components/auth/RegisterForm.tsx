@@ -9,12 +9,8 @@ const RegisterForm = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div
-        className="absolute bottom-[-40%] left-1/2 -translate-x-1/2
-               w-300 h-150
-               rounded-full blur-[300px] opacity-80"
-        style={{
-          background: "linear-gradient(180deg, #5613A3, #522BC8)",
-        }}
+        className="absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-300 h-150 rounded-full blur-[300px] opacity-80"
+        style={{ background: "linear-gradient(180deg, #5613A3, #522BC8)" }}
       />
       <div className=" w-130.75 h-196 text-white border border-[#181D27] flex justify-center">
         <form
@@ -104,10 +100,10 @@ const RegisterForm = () => {
             <div className="flex justify-centerpt-4">
               <span>Already have an account? </span>
               <Link
-                href="/LoginForm"
+                href="/login"
                 className="text-[#6936F2]"
               >
-                Log in
+                Login
               </Link>
             </div>
           </div>
@@ -116,5 +112,4 @@ const RegisterForm = () => {
     </div>
   );
 };
-
 export default RegisterForm;
