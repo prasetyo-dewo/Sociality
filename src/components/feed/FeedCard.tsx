@@ -20,7 +20,7 @@ export default function FeedCard({ post }: { post: Post }) {
 
       <Image
         src={post.imageUrl}
-        alt={post.caption}
+        alt={post.caption || ""}
         width={400}
         height={400}
         className="w-full object-cover"
